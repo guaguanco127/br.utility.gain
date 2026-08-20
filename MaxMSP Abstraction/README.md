@@ -21,7 +21,7 @@ These files were created with Max/MSP version 8.5.6.
 
 ## <a name="About"></a>About
 
-This is a basic abstraction for Max/MSP that allows the user to adjust a the volume of a stereo signal. The decibel range is from -72 dB to +35 dB.
+This is a basic abstraction for Max/MSP that allows the user to adjust the volume of a stereo signal. The decibel range is from -72 dB to +35 dB.
 -72 dB is converted to negative infinity dB.
 Currently works in any sample rate or bit depth.  
 

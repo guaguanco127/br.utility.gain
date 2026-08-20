@@ -10,7 +10,7 @@ Additional programs can be found here: [https://github.com/guaguanco127/plugins]
 
 These files were created with Max/MSP version 8.5.6, or RNBO 1.2.3. Links on how to use and/or install below. 
 
-This is a basic patch/external/plugin/device that allows the user to adjust a the volume of a stereo signal. The decibel range is from -72 dB to +35 dB.
+This is a basic patch/external/plugin/device that allows the user to adjust the volume of a stereo signal. The decibel range is from -72 dB to +35 dB.
 -72 dB is converted to negative infinity dB.
 Currently works in any sample rate or bit depth.  
 

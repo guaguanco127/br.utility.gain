@@ -29,7 +29,7 @@ br.utility.gain.rnbo.ext.1.0 is a patch set up to export as a Max/MSP external.
 
 br.utility.gain.rnbo.vst.1.0.maxpat is a patch set up to export as a VST or AU audio plugin.  
 
-Either program allows the user to adjust a the volume of a stereo signal. The decibel range is from -72 dB to +35 dB.
+Either program allows the user to adjust the volume of a stereo signal. The decibel range is from -72 dB to +35 dB.
 -72 dB is converted to negative infinity dB.
 Currently works in any sample rate or bit depth.  
 
