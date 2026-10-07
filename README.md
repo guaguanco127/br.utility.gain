@@ -1,27 +1,70 @@
 # Max/MSP Patches, Abstractions, Externals, RNBO, VSTs, and Ableton Max for Live 
 
-## br.utility.gain.1.0
+## br.utility.gain.2.0
    
 By Brian Riordan  
 [guaguanco127@gmail.com](mailto:guaguanco127@gmail.com)  
 [brianriordanmusic@gmail.com](mailto:brianriordanmusic@gmail.com)  
-[https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/)   
+[https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
+  
+Repository for br.utility.gain.2.0, with all related files, can be found here: [https://github.com/guaguanco127/br.utility.gain](https://github.com/guaguanco127/br.utility.gain)  
 Additional programs can be found here: [https://github.com/guaguanco127/br.max](https://github.com/guaguanco127/br.max)
 
-These files were created with Max/MSP version 8.5.6, or RNBO 1.2.3. Links on how to use and/or install below. 
+These files were created with Max 9, or RNBO.
 
-This is a basic patch/external/plugin/device that allows the user to adjust the volume of a stereo signal. The decibel range is from -72 dB to +35 dB.
--72 dB is converted to negative infinity dB.
-Currently works in any sample rate or bit depth.  
+## Links
 
-You can use as a Max for Live device within Ableton Live Suite, or as an abstraction or external object within Max/MSP. You can also build your own VST or AU audio plugin to use with a DAW. 
+[About](#About)  
+[Max/MSP Abstraction](https://github.com/guaguanco127/br.utility.gain/tree/main/MaxMSP%20Abstraction) To use as an abstraction within Max/MSP   
+[Max/MSP RNBO for External or VST](https://github.com/guaguanco127/br.utility.gain/tree/main/RNBO%20Patchers%20for%20External%20or%20VST) To build your own Max external, or a VST or AU audio plugin (needs RNBO)  
+[Ableton Max for Live Device](https://github.com/guaguanco127/br.utility.gain/tree/main/Ableton%20Max%20For%20Live) To use inside of Ableton Suite   
 
-## Links 
+## <a name="About"></a>About
 
-[Ableton Max for Live Device](https://github.com/guaguanco127/br.utility.gain.1.0/tree/main/Ableton%20Max%20For%20Live) To use inside of Ableton Suite   
-[Max/MSP Abstraction](https://github.com/guaguanco127/br.utility.gain.1.0/tree/main/MaxMSP%20Abstraction) To use as an abstraction within Max/MSP   
-[Max/MSP External](https://github.com/guaguanco127/br.utility.gain.1.0/tree/main/MaxMSP%20External) To use as an external object within Max/MSP     
-[Max/MSP RNBO for External or VST](https://github.com/guaguanco127/br.utility.gain.1.0/tree/main/RNBO%20Patchers%20for%20External%20or%20VST) To build an audio plugin in VST or AU for both Mac and Windows.   
+A click-free gain in decibels: -72 dB is silence, 0 dB leaves the signal unchanged, and +35 dB is the top (the same top as Ableton Utility's Gain). Jumping a gain straight to a new value cuts the wave mid-swing, and that jump is heard as a click. br.utility.gain glides to each new value over 10 ms instead: too fast to hear as a fade, smooth enough that nothing clicks, and the bottom of the range lands on true silence. Works at any sample rate.
 
+You can use it as an abstraction within Max/MSP or as a Max for Live device within Ableton Live Suite. With RNBO you can also build your own Max external or VST/AU plugin from the included RNBO patch.
 
+## <a name="New"></a>What's new in 2.0
 
+- The glide now lands on true silence at -72 dB (1.0 used a 5 ms smoother that never fully reached 0), and it glides over 10 ms.
+- Mono and stereo versions, each with or without a Gain dial (see [Which file?](#Files)).
+- The gain inlet takes a signal as well as a number, so an LFO can make a tremolo.
+- One RNBO patch now makes both the Max external and the VST3/AU plugin. Prebuilt externals are no longer included: the abstraction does the same job and more, so build an external only if you need one.
+- The Max for Live parameter is named Gain (1.0's was "live.dial"), so it reads clearly in Live's automation lanes. The separate "basic" device is gone; the commented teaching version now lives in the UI abstractions.
+- File names changed (no more `.abs`), and the plain name is now the mono version: 1.0's stereo object is now br.utility.gain.stereo.2.0. Its inlets are in the same order: L, R, Gain, with the same -72 to 35 dB range.
+
+## <a name="Files"></a>Which file?
+
+| File | What it is |
+|---|---|
+| br.utility.gain.2.0 | Mono, no UI. The plain object to patch with |
+| br.utility.gain.stereo.2.0 | Stereo, no UI. One gain for both channels, so L and R stay together |
+| br.utility.gain.ui.2.0 | Mono, with a Gain dial, ready for a [bpatcher] |
+| br.utility.gain.stereo.ui.2.0 | Stereo, with a Gain dial, ready for a [bpatcher] |
+| _br.utility.gain.example.2.0 | Example patch: open this first |
+
+The UI versions contain the plain version and have the same inlets and outlets, so either swaps in without rewiring. Open a UI version in patching mode for comments on how it is built.
+
+## <a name="Use"></a>How To Use
+
+Mono (br.utility.gain.2.0 and .ui.2.0):
+
+| Inlet | Control | Type | Range | Default |
+|---|---|---|---|---|
+| 1 | Audio In | Signal | | |
+| 2 | Gain | Signal or Float (UI: Float only) | -72 to 35 dB, -72 = silent, 0 = unchanged | 0 |
+
+Outlet 1: Audio Out (Signal)
+
+Stereo (br.utility.gain.stereo.2.0 and .stereo.ui.2.0):
+
+| Inlet | Control | Type | Range | Default |
+|---|---|---|---|---|
+| 1 | Left In | Signal | | |
+| 2 | Right In | Signal | | |
+| 3 | Gain | Signal or Float (UI: Float only) | -72 to 35 dB, -72 = silent, 0 = unchanged | 0 |
+
+Outlets 1 / 2: Left Out / Right Out (Signal)
+
+Every change glides over 10 ms, so you can turn the gain while audio plays. The gain inlet also takes a signal, so an LFO can make a tremolo (the example patch shows one). The Gain dial puts 0 dB at 12 o'clock, with more room for fine moves near unity. In the UI versions a number into the Gain inlet moves the dial, so the screen always shows what you hear. Hover any inlet or outlet in Max for its description.
