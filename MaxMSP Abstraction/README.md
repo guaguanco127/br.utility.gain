@@ -1,11 +1,11 @@
-# Max/MSP Abstraction: br.utility.gain.2.0  
+# Max/MSP Abstraction: br.utility.gain.2.1  
    
 By Brian Riordan  
 [guaguanco127@gmail.com](mailto:guaguanco127@gmail.com)  
 [brianriordanmusic@gmail.com](mailto:brianriordanmusic@gmail.com)  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
   
-Repository for br.utility.gain.2.0, with all related files, can be found here: [https://github.com/guaguanco127/br.utility.gain](https://github.com/guaguanco127/br.utility.gain)  
+Repository for br.utility.gain.2.1, with all related files, can be found here: [https://github.com/guaguanco127/br.utility.gain](https://github.com/guaguanco127/br.utility.gain)  
 Additional programs can be found here: [https://github.com/guaguanco127/br.max](https://github.com/guaguanco127/br.max)
 
 These files were created with Max 9.
@@ -16,7 +16,8 @@ These files were created with Max 9.
 [Which file?](#Files)  
 [What is an abstraction?](#Abstraction)  
 [How To Install](#Install)  
-[How To Use](#Use) 
+[How To Use](#Use)  
+[State outlet](#State) 
 
 ## <a name="About"></a>About
 
@@ -26,11 +27,11 @@ A click-free gain in decibels: -72 dB is silence, 0 dB leaves the signal unchang
 
 | File | What it is |
 |---|---|
-| br.utility.gain.2.0 | Mono, no UI. The plain object to patch with |
-| br.utility.gain.stereo.2.0 | Stereo, no UI. One gain for both channels, so L and R stay together |
-| br.utility.gain.ui.2.0 | Mono, with a Gain dial, ready for a [bpatcher] |
-| br.utility.gain.stereo.ui.2.0 | Stereo, with a Gain dial, ready for a [bpatcher] |
-| _br.utility.gain.example.2.0 | Example patch: open this first |
+| br.utility.gain.2.1 | Mono, no UI. The plain object to patch with |
+| br.utility.gain.stereo.2.1 | Stereo, no UI. One gain for both channels, so L and R stay together |
+| br.utility.gain.ui.2.1 | Mono, with a Gain dial, ready for a [bpatcher] |
+| br.utility.gain.stereo.ui.2.1 | Stereo, with a Gain dial, ready for a [bpatcher] |
+| _br.utility.gain.example.2.1 | Example patch: open this first |
 
 The UI versions contain the plain version and have the same inlets and outlets, so either swaps in without rewiring. Open a UI version in patching mode for comments on how it is built.
 
@@ -44,22 +45,23 @@ By saving your logic in an abstraction, you can create modules that can be used 
 
 1. Make sure you have Max 9 installed, and that the Max patch you are using is saved inside a folder.  
 
-2. Copy the .maxpat files you want into the same folder as your patch. The UI versions need their plain version next to them (br.utility.gain.stereo.ui.2.0 uses br.utility.gain.stereo.2.0).
+2. Copy the .maxpat files you want into the same folder as your patch. The UI versions need their plain version next to them (br.utility.gain.stereo.ui.2.1 uses br.utility.gain.stereo.2.1).
 
-3. In your patch, create an object called br.utility.gain.stereo.2.0 (or any other name from the table above, without .maxpat). For a version with a dial, create a [bpatcher] and choose br.utility.gain.stereo.ui.2.0.maxpat as its patcher.
+3. In your patch, create an object called br.utility.gain.stereo.2.1 (or any other name from the table above, without .maxpat). For a version with a dial, create a [bpatcher] and choose br.utility.gain.stereo.ui.2.1.maxpat as its patcher.
 
 ## <a name="Use"></a>How To Use
 
-Mono (br.utility.gain.2.0 and .ui.2.0):
+Mono (br.utility.gain.2.1 and .ui.2.1):
 
 | Inlet | Control | Type | Range | Default |
 |---|---|---|---|---|
 | 1 | Audio In | Signal | | |
 | 2 | Gain | Signal or Float (UI: Float only) | -72 to 35 dB, -72 = silent, 0 = unchanged | 0 |
 
-Outlet 1: Audio Out (Signal)
+Outlet 1: Audio Out (Signal)  
+Outlet 2: State (Message), see [State outlet](#State)
 
-Stereo (br.utility.gain.stereo.2.0 and .stereo.ui.2.0):
+Stereo (br.utility.gain.stereo.2.1 and .stereo.ui.2.1):
 
 | Inlet | Control | Type | Range | Default |
 |---|---|---|---|---|
@@ -67,8 +69,20 @@ Stereo (br.utility.gain.stereo.2.0 and .stereo.ui.2.0):
 | 2 | Right In | Signal | | |
 | 3 | Gain | Signal or Float (UI: Float only) | -72 to 35 dB, -72 = silent, 0 = unchanged | 0 |
 
-Outlets 1 / 2: Left Out / Right Out (Signal)
+Outlets 1 / 2: Left Out / Right Out (Signal)  
+Outlet 3: State (Message), see [State outlet](#State)
 
 Every change glides over 10 ms, so you can turn the gain while audio plays. The gain inlet also takes a signal, so an LFO can make a tremolo (the example patch shows one). The Gain dial puts 0 dB at 12 o'clock, with more room for fine moves near unity. In the UI versions a number into the Gain inlet moves the dial, so the screen always shows what you hear. Hover any inlet or outlet in Max for its description.
+
+## <a name="State"></a>State outlet
+
+The last outlet of every abstraction (State) sends the current gain as a named message the moment it changes: `gain <dB>` (for example `gain -6.`). Use it to keep a display, Mira or another patch in sync. Pick it out by name with [route gain], not by position, so your patch keeps working if a later version adds controls. Repeats are filtered out.
+
+| Message | Type | Range |
+|---|---|---|
+| gain | Float | -72 - 35 dB, -72 = silent |
+
+Only numbers are reported: if a signal drives the Gain inlet of the plain version, nothing comes out of State. The example patch has a State outlet tab that shows all of this, and the RNBO patch shows the same [route gain].
+
 
 Double-click the object to see inside it and study how it was built.

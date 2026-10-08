@@ -13,7 +13,7 @@
             85.0,
             104.0,
             900.0,
-            360.0
+            413.0
         ],
         "bglocked": 0,
         "openinpresentation": 1,
@@ -39,7 +39,7 @@
         "enablehscroll": 1,
         "enablevscroll": 1,
         "devicewidth": 58.0,
-        "description": "br.utility.gain.ui.2.0 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+        "description": "br.utility.gain.ui.2.1 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
         "digest": "",
         "tags": "",
         "style": "",
@@ -59,7 +59,7 @@
                         360.0,
                         33.0
                     ],
-                    "text": "br.utility.gain.ui.2.0 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/",
+                    "text": "br.utility.gain.ui.2.1 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/",
                     "fontname": "Arial",
                     "fontsize": 12.0
                 }
@@ -155,11 +155,12 @@
                 "box": {
                     "maxclass": "newobj",
                     "id": "obj-core",
-                    "text": "br.utility.gain.2.0",
+                    "text": "br.utility.gain.2.1",
                     "numinlets": 2,
-                    "numoutlets": 1,
+                    "numoutlets": 2,
                     "outlettype": [
-                        "signal"
+                        "signal",
+                        ""
                     ],
                     "patching_rect": [
                         15.0,
@@ -220,7 +221,7 @@
                         240.0,
                         75.0
                     ],
-                    "text": "[br.utility.gain.2.0] is the real object: open it to see the gen~ inside. This file only adds the dial, so you can also patch the core directly and drive its gain inlet with a signal (an LFO for tremolo).",
+                    "text": "[br.utility.gain.2.1] is the real object: open it to see the gen~ inside. This file only adds the dial, so you can also patch the core directly and drive its gain inlet with a signal (an LFO for tremolo).",
                     "fontname": "Arial",
                     "fontsize": 12.0
                 }
@@ -264,7 +265,7 @@
             {
                 "box": {
                     "angle": 270.0,
-                    "annotation": "br.utility.gain.ui.2.0 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+                    "annotation": "br.utility.gain.ui.2.1 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
                     "background": 1,
                     "bgcolor": [
                         0.0,
@@ -272,7 +273,7 @@
                         0.0,
                         1.0
                     ],
-                    "hint": "br.utility.gain.ui.2.0 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+                    "hint": "br.utility.gain.ui.2.1 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
                     "id": "obj-panel",
                     "maxclass": "panel",
                     "mode": 0,
@@ -293,6 +294,40 @@
                     ],
                     "proportion": 0.5,
                     "rounded": 7
+                }
+            },
+            {
+                "box": {
+                    "maxclass": "outlet",
+                    "id": "obj-1",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "outlettype": [],
+                    "patching_rect": [
+                        90.0,
+                        180.0,
+                        30.0,
+                        30.0
+                    ],
+                    "comment": "State (Message): gain <dB> (e.g. gain -6.), sent the moment the gain changes. Numbers only (a signal is not reported). Pick it out by name: [route gain]"
+                }
+            },
+            {
+                "box": {
+                    "maxclass": "comment",
+                    "id": "obj-2",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "outlettype": [],
+                    "patching_rect": [
+                        15.0,
+                        333.0,
+                        480.0,
+                        47.0
+                    ],
+                    "text": "The last outlet (State) reports the dial as gain <dB> (e.g. gain -6.) the moment it changes. It comes from the core, so turning the dial, numbers into the inlet and preset recalls all show up. Pick it out by name with [route gain].",
+                    "fontname": "Arial",
+                    "fontsize": 12.0
                 }
             }
         ],
@@ -341,6 +376,18 @@
                     ],
                     "destination": [
                         "obj-out1",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-core",
+                        1
+                    ],
+                    "destination": [
+                        "obj-1",
                         0
                     ]
                 }
