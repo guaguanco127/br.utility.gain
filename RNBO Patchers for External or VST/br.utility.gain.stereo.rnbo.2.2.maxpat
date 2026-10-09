@@ -9,32 +9,14 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 134.0, 159.0, 416.0, 638.0 ],
-        "description": "br.utility.gain.stereo.rnbo.2.1 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+        "rect": [
+            134.0,
+            159.0,
+            416.0,
+            638.0
+        ],
+        "description": "br.utility.gain.stereo.rnbo.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
         "boxes": [
-            {
-                "box": {
-                    "format": 6,
-                    "id": "obj-4",
-                    "maxclass": "flonum",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "bang" ],
-                    "parameter_enable": 0,
-                    "patching_rect": [ 125.0, 304.0, 50.0, 22.0 ]
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-1",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "patching_rect": [ 115.0, 265.0, 62.0, 22.0 ],
-                    "text": "route gain"
-                }
-            },
             {
                 "box": {
                     "id": "obj-signature",
@@ -42,8 +24,13 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 218.0, 40.0, 520.0, 33.0 ],
-                    "text": "br.utility.gain.stereo.rnbo.2.1 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/"
+                    "patching_rect": [
+                        218.0,
+                        40.0,
+                        520.0,
+                        33.0
+                    ],
+                    "text": "br.utility.gain.stereo.rnbo.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/"
                 }
             },
             {
@@ -53,9 +40,16 @@
                     "maxclass": "attrui",
                     "numinlets": 1,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
+                    "outlettype": [
+                        ""
+                    ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 232.0, 104.0, 150.0, 22.0 ]
+                    "patching_rect": [
+                        232.0,
+                        104.0,
+                        150.0,
+                        22.0
+                    ]
                 }
             },
             {
@@ -66,7 +60,12 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 38.0, 40.0, 150.0, 39.0 ],
+                    "patching_rect": [
+                        38.0,
+                        40.0,
+                        150.0,
+                        39.0
+                    ],
                     "text": "Drop sample into here"
                 }
             },
@@ -80,9 +79,20 @@
                     "mode": "basic",
                     "numinlets": 1,
                     "numoutlets": 5,
-                    "outlettype": [ "signal", "signal", "signal", "", "dictionary" ],
+                    "outlettype": [
+                        "signal",
+                        "signal",
+                        "signal",
+                        "",
+                        "dictionary"
+                    ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 38.0, 98.0, 150.0, 30.0 ],
+                    "patching_rect": [
+                        38.0,
+                        98.0,
+                        150.0,
+                        30.0
+                    ],
                     "quality": "basic",
                     "saved_attribute_attributes": {
                         "candicane2": {
@@ -115,7 +125,12 @@
                     "maxclass": "ezdac~",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 61.0, 481.0, 45.0, 45.0 ]
+                    "patching_rect": [
+                        61.0,
+                        481.0,
+                        45.0,
+                        45.0
+                    ]
                 }
             },
             {
@@ -125,12 +140,25 @@
                     "maxclass": "live.gain~",
                     "numinlets": 2,
                     "numoutlets": 5,
-                    "outlettype": [ "signal", "signal", "", "float", "list" ],
+                    "outlettype": [
+                        "signal",
+                        "signal",
+                        "",
+                        "float",
+                        "list"
+                    ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 61.0, 307.0, 48.0, 136.0 ],
+                    "patching_rect": [
+                        61.0,
+                        307.0,
+                        48.0,
+                        136.0
+                    ],
                     "saved_attribute_attributes": {
                         "valueof": {
-                            "parameter_initial": [ -70.0 ],
+                            "parameter_initial": [
+                                -70.0
+                            ],
                             "parameter_initial_enable": 1,
                             "parameter_longname": "Out",
                             "parameter_mmax": 6.0,
@@ -195,7 +223,11 @@
                             }
                         ]
                     },
-                    "outlettype": [ "signal", "signal", "list" ],
+                    "outlettype": [
+                        "signal",
+                        "signal",
+                        "list"
+                    ],
                     "patcher": {
                         "fileversion": 1,
                         "appversion": {
@@ -206,7 +238,12 @@
                             "modernui": 1
                         },
                         "classnamespace": "rnbo",
-                        "rect": [ 59.0, 104.0, 640.0, 480.0 ],
+                        "rect": [
+                            59.0,
+                            104.0,
+                            640.0,
+                            480.0
+                        ],
                         "default_fontname": "Lato",
                         "title": "untitled",
                         "boxes": [
@@ -216,7 +253,12 @@
                                     "maxclass": "newobj",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 159.0, 218.0, 43.0, 23.0 ],
+                                    "patching_rect": [
+                                        159.0,
+                                        218.0,
+                                        43.0,
+                                        23.0
+                                    ],
                                     "rnbo_classname": "out~",
                                     "rnbo_extra_attributes": {
                                         "meta": "",
@@ -309,7 +351,12 @@
                                     "maxclass": "newobj",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 42.0, 218.0, 43.0, 23.0 ],
+                                    "patching_rect": [
+                                        42.0,
+                                        218.0,
+                                        43.0,
+                                        23.0
+                                    ],
                                     "rnbo_classname": "out~",
                                     "rnbo_extra_attributes": {
                                         "meta": "",
@@ -403,8 +450,16 @@
                                     "maxclass": "newobj",
                                     "numinlets": 2,
                                     "numoutlets": 2,
-                                    "outlettype": [ "", "" ],
-                                    "patching_rect": [ 293.0, 75.0, 180.0, 23.0 ],
+                                    "outlettype": [
+                                        "",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        293.0,
+                                        75.0,
+                                        180.0,
+                                        23.0
+                                    ],
                                     "rnbo_classname": "param",
                                     "rnbo_extra_attributes": {
                                         "order": "0",
@@ -508,7 +563,9 @@
                                                 "attrOrProp": 2,
                                                 "digest": "Minimum value",
                                                 "isalias": 0,
-                                                "aliases": [ "min" ],
+                                                "aliases": [
+                                                    "min"
+                                                ],
                                                 "settable": 1,
                                                 "attachable": 0,
                                                 "isparam": 0,
@@ -539,7 +596,9 @@
                                                 "attrOrProp": 2,
                                                 "digest": "Maximum value",
                                                 "isalias": 0,
-                                                "aliases": [ "max" ],
+                                                "aliases": [
+                                                    "max"
+                                                ],
                                                 "settable": 1,
                                                 "attachable": 0,
                                                 "isparam": 0,
@@ -820,8 +879,15 @@
                                     "maxclass": "newobj",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "signal" ],
-                                    "patching_rect": [ 234.0, 27.0, 178.0, 23.0 ],
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        234.0,
+                                        27.0,
+                                        178.0,
+                                        23.0
+                                    ],
                                     "rnbo_classname": "in~",
                                     "rnbo_extra_attributes": {
                                         "meta": ""
@@ -912,8 +978,15 @@
                                     "maxclass": "newobj",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "signal" ],
-                                    "patching_rect": [ 42.0, 27.0, 171.0, 23.0 ],
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        42.0,
+                                        27.0,
+                                        171.0,
+                                        23.0
+                                    ],
                                     "rnbo_classname": "in~",
                                     "rnbo_extra_attributes": {
                                         "meta": ""
@@ -1011,17 +1084,29 @@
                                                 "modernui": 1
                                             },
                                             "classnamespace": "dsp.gen",
-                                            "rect": [ -387.0, -966.0, 1492.0, 725.0 ],
+                                            "rect": [
+                                                -387.0,
+                                                -966.0,
+                                                1492.0,
+                                                725.0
+                                            ],
                                             "boxes": [
                                                 {
                                                     "box": {
                                                         "maxclass": "newobj",
                                                         "text": "in 1 @comment \"Left In (Signal)\"",
-                                                        "patching_rect": [ 50.0, 20.0, 200.0, 22.0 ],
+                                                        "patching_rect": [
+                                                            50.0,
+                                                            20.0,
+                                                            200.0,
+                                                            22.0
+                                                        ],
                                                         "numinlets": 0,
                                                         "fontname": "Arial",
                                                         "numoutlets": 1,
-                                                        "outlettype": [ "" ],
+                                                        "outlettype": [
+                                                            ""
+                                                        ],
                                                         "id": "obj-1",
                                                         "fontsize": 12.0
                                                     }
@@ -1030,11 +1115,18 @@
                                                     "box": {
                                                         "maxclass": "newobj",
                                                         "text": "in 2 @comment \"Right In (Signal)\"",
-                                                        "patching_rect": [ 265.0, 20.0, 200.0, 22.0 ],
+                                                        "patching_rect": [
+                                                            265.0,
+                                                            20.0,
+                                                            200.0,
+                                                            22.0
+                                                        ],
                                                         "numinlets": 0,
                                                         "fontname": "Arial",
                                                         "numoutlets": 1,
-                                                        "outlettype": [ "" ],
+                                                        "outlettype": [
+                                                            ""
+                                                        ],
                                                         "id": "obj-2",
                                                         "fontsize": 12.0
                                                     }
@@ -1044,11 +1136,18 @@
                                                         "maxclass": "newobj",
                                                         "text": "in 3 @comment \"Gain (Signal/Float) dB -72. to 35. -72 = silent, 0 = unchanged. 10 ms smoothing. Default 0\"",
                                                         "linecount": 4,
-                                                        "patching_rect": [ 480.0, 20.0, 200.0, 22.0 ],
+                                                        "patching_rect": [
+                                                            480.0,
+                                                            20.0,
+                                                            200.0,
+                                                            22.0
+                                                        ],
                                                         "numinlets": 0,
                                                         "fontname": "Arial",
                                                         "numoutlets": 1,
-                                                        "outlettype": [ "" ],
+                                                        "outlettype": [
+                                                            ""
+                                                        ],
                                                         "id": "obj-3",
                                                         "fontsize": 12.0
                                                     }
@@ -1056,22 +1155,35 @@
                                                 {
                                                     "box": {
                                                         "maxclass": "codebox",
-                                                        "patching_rect": [ 50.0, 70.0, 560.0, 420.0 ],
+                                                        "patching_rect": [
+                                                            50.0,
+                                                            70.0,
+                                                            560.0,
+                                                            420.0
+                                                        ],
                                                         "numinlets": 3,
                                                         "fontname": "<Monospaced>",
                                                         "numoutlets": 2,
                                                         "fontface": 0,
-                                                        "outlettype": [ "", "" ],
+                                                        "outlettype": [
+                                                            "",
+                                                            ""
+                                                        ],
                                                         "id": "obj-4",
                                                         "fontsize": 12.0,
-                                                        "code": "// br.utility.gain.stereo.2.1 -- click-free gain in decibels\n// Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/\n// MUST MATCH: the stereo core, the stereo UI, the RNBO host and the M4L device embed this same code\n// in1/in2 audio L/R, in3 gain in dB -72..35, signal or number. -72 = silent, 0 = unchanged\n// out1/out2 audio L/R. One gain for both channels, so L and R stay together\n// The gain glides to each new value along a 10 ms smoother, so a jump never clicks.\n// It smooths amplitude, not dB, and lands exactly on its target, so the lowest\n// setting, -72, is true silence, which a plain one-pole smoother never reaches.\n// A moving gain signal, such as an LFO for tremolo, is smoothed the same way.\n\nHistory gS(0);\n\n// read state first\ng = gS;\n\ndb = clamp(in3, -72, 35);\ngoal = (db > -72) ? dbtoa(db) : 0;\nk = 1 - exp(-1 / max(1, mstosamps(10)));\ng = g + (goal - g) * k;\n// within -120 dB of the target: land on it\nif (abs(goal - g) < 0.000001) {\n    g = goal;\n}\n\nout1 = in1 * g;\nout2 = in2 * g;\n// write state last\ngS = g;\n"
+                                                        "code": "// br.utility.gain.stereo.2.2 -- click-free gain in decibels\n// Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/\n// MUST MATCH: the stereo core, the stereo UI, the RNBO host and the M4L device embed this same code\n// in1/in2 audio L/R, in3 gain in dB -72..35, signal or number. -72 = silent, 0 = unchanged\n// out1/out2 audio L/R. One gain for both channels, so L and R stay together\n// The gain glides to each new value along a 10 ms smoother, so a jump never clicks.\n// It smooths amplitude, not dB, and lands exactly on its target, so the lowest\n// setting, -72, is true silence, which a plain one-pole smoother never reaches.\n// A moving gain signal, such as an LFO for tremolo, is smoothed the same way.\n\nHistory gS(0);\n\n// read state first\ng = gS;\n\ndb = clamp(in3, -72, 35);\ngoal = (db > -72) ? dbtoa(db) : 0;\nk = 1 - exp(-1 / max(1, mstosamps(10)));\ng = g + (goal - g) * k;\n// within -120 dB of the target: land on it\nif (abs(goal - g) < 0.000001) {\n    g = goal;\n}\n\nout1 = in1 * g;\nout2 = in2 * g;\n// write state last\ngS = g;\n"
                                                     }
                                                 },
                                                 {
                                                     "box": {
                                                         "maxclass": "newobj",
                                                         "text": "out 1 @comment \"Left Out (Signal)\"",
-                                                        "patching_rect": [ 50.0, 510.0, 200.0, 22.0 ],
+                                                        "patching_rect": [
+                                                            50.0,
+                                                            510.0,
+                                                            200.0,
+                                                            22.0
+                                                        ],
                                                         "numinlets": 1,
                                                         "fontname": "Arial",
                                                         "numoutlets": 0,
@@ -1084,7 +1196,12 @@
                                                         "maxclass": "newobj",
                                                         "text": "out 2 @comment \"Right Out (Signal)\"",
                                                         "linecount": 2,
-                                                        "patching_rect": [ 265.0, 510.0, 200.0, 22.0 ],
+                                                        "patching_rect": [
+                                                            265.0,
+                                                            510.0,
+                                                            200.0,
+                                                            22.0
+                                                        ],
                                                         "numinlets": 1,
                                                         "fontname": "Arial",
                                                         "numoutlets": 0,
@@ -1096,32 +1213,62 @@
                                             "lines": [
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-4", 1 ],
-                                                        "destination": [ "obj-6", 0 ]
+                                                        "source": [
+                                                            "obj-4",
+                                                            1
+                                                        ],
+                                                        "destination": [
+                                                            "obj-6",
+                                                            0
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-4", 0 ],
-                                                        "destination": [ "obj-5", 0 ]
+                                                        "source": [
+                                                            "obj-4",
+                                                            0
+                                                        ],
+                                                        "destination": [
+                                                            "obj-5",
+                                                            0
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-3", 0 ],
-                                                        "destination": [ "obj-4", 2 ]
+                                                        "source": [
+                                                            "obj-3",
+                                                            0
+                                                        ],
+                                                        "destination": [
+                                                            "obj-4",
+                                                            2
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-2", 0 ],
-                                                        "destination": [ "obj-4", 1 ]
+                                                        "source": [
+                                                            "obj-2",
+                                                            0
+                                                        ],
+                                                        "destination": [
+                                                            "obj-4",
+                                                            1
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-1", 0 ],
-                                                        "destination": [ "obj-4", 0 ]
+                                                        "source": [
+                                                            "obj-1",
+                                                            0
+                                                        ],
+                                                        "destination": [
+                                                            "obj-4",
+                                                            0
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -1132,8 +1279,16 @@
                                     "maxclass": "newobj",
                                     "numinlets": 3,
                                     "numoutlets": 2,
-                                    "outlettype": [ "signal", "signal" ],
-                                    "patching_rect": [ 42.0, 118.0, 136.0, 23.0 ],
+                                    "outlettype": [
+                                        "signal",
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        42.0,
+                                        118.0,
+                                        136.0,
+                                        23.0
+                                    ],
                                     "rnbo_classname": "gen~",
                                     "rnbo_extra_attributes": {
                                         "exposeparams": 0
@@ -1197,7 +1352,9 @@
                                                 "digest": "a title",
                                                 "defaultarg": 1,
                                                 "isalias": 0,
-                                                "aliases": [ "t" ],
+                                                "aliases": [
+                                                    "t"
+                                                ],
                                                 "settable": 1,
                                                 "attachable": 0,
                                                 "isparam": 0,
@@ -1279,8 +1436,15 @@
                                     "maxclass": "newobj",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "" ],
-                                    "patching_rect": [ 293.0, 27.0, 300.0, 23.0 ],
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        293.0,
+                                        27.0,
+                                        300.0,
+                                        23.0
+                                    ],
                                     "rnbo_classname": "in",
                                     "rnbo_extra_attributes": {
                                         "meta": ""
@@ -1336,7 +1500,11 @@
                                         "outputs": [
                                             {
                                                 "name": "out1",
-                                                "type": [ "bang", "number", "list" ],
+                                                "type": [
+                                                    "bang",
+                                                    "number",
+                                                    "list"
+                                                ],
                                                 "digest": "value from inlet with index 3",
                                                 "displayName": "Gain (Float) dB -72. to 35. -72 = silent, 0 = unchanged. 10 ms smoothing. Default 0",
                                                 "docked": 0
@@ -1361,109 +1529,98 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 42.0, 260.0, 520.0, 75.0 ],
-                                    "text": "gen~ code MUST MATCH br.utility.gain.stereo.2.1 (open both: same codebox). param Gain = the plugin parameter (VST/AU), exponent 0.57 puts 0 dB mid-knob. in 3 sets the same param, so the exported external [br.utility.gain.stereo.2.1~] has the same three inlets as the abstraction: L, R, Gain."
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-st1",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 3,
-                                    "outlettype": [ "", "", "" ],
-                                    "patching_rect": [ 500.0, 118.0, 50.0, 23.0 ],
-                                    "rnbo_classname": "change",
-                                    "rnbo_extra_attributes": {
-                                        "mode": "default"
-                                    },
-                                    "rnbo_serial": 1,
-                                    "rnbo_uniqueid": "change_obj-st1",
-                                    "text": "change"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-st2",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [ 500.0, 160.0, 90.0, 23.0 ],
-                                    "rnbo_classname": "outport",
-                                    "rnbo_extra_attributes": {
-                                        "meta": ""
-                                    },
-                                    "rnbo_serial": 1,
-                                    "rnbo_uniqueid": "outport_obj-st2",
-                                    "text": "outport gain"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-st3",
-                                    "linecount": 4,
-                                    "maxclass": "comment",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [ 500.0, 190.0, 260.0, 61.0 ],
-                                    "text": "State: outport gain sends gain <dB> (e.g. gain -6.) out of the rnbo~ rightmost outlet the moment it changes. Same as the State outlet of the abstractions."
+                                    "patching_rect": [
+                                        42.0,
+                                        260.0,
+                                        520.0,
+                                        75.0
+                                    ],
+                                    "text": "gen~ code MUST MATCH br.utility.gain.stereo.2.2 (open both: same codebox). param Gain = the plugin parameter (VST/AU), exponent 0.57 puts 0 dB mid-knob. in 3 sets the same param, so the exported external [br.utility.gain.stereo.2.2~] has the same three inlets as the abstraction: L, R, Gain."
                                 }
                             }
                         ],
                         "lines": [
                             {
                                 "patchline": {
-                                    "destination": [ "obj-3", 0 ],
-                                    "source": [ "obj-1", 0 ]
+                                    "destination": [
+                                        "obj-3",
+                                        0
+                                    ],
+                                    "source": [
+                                        "obj-1",
+                                        0
+                                    ]
                                 }
                             },
                             {
                                 "patchline": {
-                                    "destination": [ "obj-3", 1 ],
-                                    "source": [ "obj-2", 0 ]
+                                    "destination": [
+                                        "obj-3",
+                                        1
+                                    ],
+                                    "source": [
+                                        "obj-2",
+                                        0
+                                    ]
                                 }
                             },
                             {
                                 "patchline": {
-                                    "destination": [ "obj-4", 0 ],
-                                    "source": [ "obj-3", 1 ]
+                                    "destination": [
+                                        "obj-4",
+                                        0
+                                    ],
+                                    "source": [
+                                        "obj-3",
+                                        1
+                                    ]
                                 }
                             },
                             {
                                 "patchline": {
-                                    "destination": [ "obj-5", 0 ],
-                                    "source": [ "obj-3", 0 ]
+                                    "destination": [
+                                        "obj-5",
+                                        0
+                                    ],
+                                    "source": [
+                                        "obj-3",
+                                        0
+                                    ]
                                 }
                             },
                             {
                                 "patchline": {
-                                    "destination": [ "obj-3", 2 ],
+                                    "destination": [
+                                        "obj-3",
+                                        2
+                                    ],
                                     "order": 1,
-                                    "source": [ "obj-7", 0 ]
+                                    "source": [
+                                        "obj-7",
+                                        0
+                                    ]
                                 }
                             },
                             {
                                 "patchline": {
-                                    "destination": [ "obj-st1", 0 ],
-                                    "order": 0,
-                                    "source": [ "obj-7", 0 ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [ "obj-7", 0 ],
-                                    "source": [ "obj-9", 0 ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [ "obj-st2", 0 ],
-                                    "source": [ "obj-st1", 0 ]
+                                    "destination": [
+                                        "obj-7",
+                                        0
+                                    ],
+                                    "source": [
+                                        "obj-9",
+                                        0
+                                    ]
                                 }
                             }
                         ]
                     },
-                    "patching_rect": [ 54.0, 204.0, 40.0, 22.0 ],
+                    "patching_rect": [
+                        54.0,
+                        204.0,
+                        40.0,
+                        22.0
+                    ],
                     "rnboattrcache": {
                         "Gain": {
                             "label": "Gain",
@@ -1543,86 +1700,137 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 232.0, 300.0, 340.0, 87.0 ],
-                    "text": "EXPORT NAME: br.utility.gain.stereo.2.1~\nMax External Export asks for a name: keep the ~ at the end. Without it the external has the same name as the abstraction br.utility.gain.stereo.2.1, and Max loads whichever it finds first. Audio Plugin Export (VST3/AU): any name; the Gain param appears in your DAW."
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-st4",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 261.0, 225.0, 443.0, 20.0 ],
-                    "text": "rnbo~ rightmost outlet = State: gain <dB> (e.g. gain -6.) (from outport gain inside)."
+                    "patching_rect": [
+                        232.0,
+                        300.0,
+                        340.0,
+                        87.0
+                    ],
+                    "text": "EXPORT NAME: br.utility.gain.stereo.2.2~\nMax External Export asks for a name: keep the ~ at the end. Without it the external has the same name as the abstraction br.utility.gain.stereo.2.2, and Max loads whichever it finds first. Audio Plugin Export (VST3/AU): any name; the Gain param appears in your DAW."
                 }
             }
         ],
         "lines": [
             {
                 "patchline": {
-                    "destination": [ "obj-4", 0 ],
-                    "source": [ "obj-1", 0 ]
+                    "destination": [
+                        "obj-6",
+                        1
+                    ],
+                    "source": [
+                        "obj-5",
+                        1
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-6", 1 ],
-                    "source": [ "obj-5", 1 ]
+                    "destination": [
+                        "obj-6",
+                        0
+                    ],
+                    "source": [
+                        "obj-5",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-6", 0 ],
-                    "source": [ "obj-5", 0 ]
+                    "destination": [
+                        "obj-5",
+                        1
+                    ],
+                    "source": [
+                        "obj-7",
+                        1
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-1", 0 ],
-                    "source": [ "obj-7", 2 ]
+                    "destination": [
+                        "obj-5",
+                        0
+                    ],
+                    "source": [
+                        "obj-7",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-5", 1 ],
-                    "source": [ "obj-7", 1 ]
+                    "destination": [
+                        "obj-7",
+                        0
+                    ],
+                    "source": [
+                        "obj-8",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-5", 0 ],
-                    "source": [ "obj-7", 0 ]
+                    "destination": [
+                        "obj-7",
+                        1
+                    ],
+                    "source": [
+                        "obj-9",
+                        1
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-7", 0 ],
-                    "source": [ "obj-8", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-7", 1 ],
-                    "source": [ "obj-9", 1 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-7", 0 ],
-                    "source": [ "obj-9", 0 ]
+                    "destination": [
+                        "obj-7",
+                        0
+                    ],
+                    "source": [
+                        "obj-9",
+                        0
+                    ]
                 }
             }
         ],
         "parameters": {
-            "obj-5": [ "Out", "Out", 0 ],
-            "obj-7": [ "rnbo~", "rnbo~", 0 ],
+            "obj-5": [
+                "Out",
+                "Out",
+                0
+            ],
+            "obj-7": [
+                "rnbo~",
+                "rnbo~",
+                0
+            ],
             "parameterbanks": {
                 "0": {
                     "index": 0,
                     "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                    "parameters": [
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-"
+                    ],
+                    "buttons": [
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-"
+                    ]
                 }
             },
             "inherited_shortname": 1

@@ -1,13 +1,13 @@
 # Max/MSP Patches, Abstractions, Externals, RNBO, VSTs, and Ableton Max for Live 
 
-## br.utility.gain.2.1
+## br.utility.gain.2.2
    
 By Brian Riordan  
 [guaguanco127@gmail.com](mailto:guaguanco127@gmail.com)  
 [brianriordanmusic@gmail.com](mailto:brianriordanmusic@gmail.com)  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
   
-Repository for br.utility.gain.2.1, with all related files, can be found here: [https://github.com/guaguanco127/br.utility.gain](https://github.com/guaguanco127/br.utility.gain)  
+Repository for br.utility.gain.2.2, with all related files, can be found here: [https://github.com/guaguanco127/br.utility.gain](https://github.com/guaguanco127/br.utility.gain)  
 Additional programs can be found here: [https://github.com/guaguanco127/br.max](https://github.com/guaguanco127/br.max)
 
 These files were created with Max 9, or RNBO.
@@ -25,6 +25,12 @@ A click-free gain in decibels: -72 dB is silence, 0 dB leaves the signal unchang
 
 You can use it as an abstraction within Max/MSP or as a Max for Live device within Ableton Live Suite. With RNBO you can also build your own Max external or VST/AU plugin from the included RNBO patch.
 
+## <a name="New22"></a>What's new in 2.2
+
+- The [State outlet](#State) is now on the UI versions only (the ones with a dial). It reports the dial, so turning it, numbers into the inlets and preset recalls all show up, with the same names and the same position as in 2.1.
+- The plain versions (no UI) and the RNBO patch no longer have a State outlet: whatever drives them already knows the values. Their outlets are audio only again, as in 2.0.
+- The Max for Live device is unchanged apart from the version number.
+
 ## <a name="New21"></a>What's new in 2.1
 
 - New [State outlet](#State): every abstraction and the RNBO patch now send `gain <dB>` (for example `gain -6.`) out of their last outlet the moment it changes, so a display, Mira or another patch can follow along.
@@ -38,23 +44,23 @@ You can use it as an abstraction within Max/MSP or as a Max for Live device with
 - The gain inlet takes a signal as well as a number, so an LFO can make a tremolo.
 - One RNBO patch now makes both the Max external and the VST3/AU plugin. Prebuilt externals are no longer included: the abstraction does the same job and more, so build an external only if you need one.
 - The Max for Live parameter is named Gain (1.0's was "live.dial"), so it reads clearly in Live's automation lanes. The separate "basic" device is gone; the commented teaching version now lives in the UI abstractions.
-- File names changed (no more `.abs`), and the plain name is now the mono version: 1.0's stereo object is now br.utility.gain.stereo.2.1. Its inlets are in the same order: L, R, Gain, with the same -72 to 35 dB range.
+- File names changed (no more `.abs`), and the plain name is now the mono version: 1.0's stereo object is now br.utility.gain.stereo.2.2. Its inlets are in the same order: L, R, Gain, with the same -72 to 35 dB range.
 
 ## <a name="Files"></a>Which file?
 
 | File | What it is |
 |---|---|
-| br.utility.gain.2.1 | Mono, no UI. The plain object to patch with |
-| br.utility.gain.stereo.2.1 | Stereo, no UI. One gain for both channels, so L and R stay together |
-| br.utility.gain.ui.2.1 | Mono, with a Gain dial, ready for a [bpatcher] |
-| br.utility.gain.stereo.ui.2.1 | Stereo, with a Gain dial, ready for a [bpatcher] |
-| _br.utility.gain.example.2.1 | Example patch: open this first |
+| br.utility.gain.2.2 | Mono, no UI. The plain object to patch with |
+| br.utility.gain.stereo.2.2 | Stereo, no UI. One gain for both channels, so L and R stay together |
+| br.utility.gain.ui.2.2 | Mono, with a Gain dial, ready for a [bpatcher] |
+| br.utility.gain.stereo.ui.2.2 | Stereo, with a Gain dial, ready for a [bpatcher] |
+| _br.utility.gain.example.2.2 | Example patch: open this first |
 
-The UI versions contain the plain version and have the same inlets and outlets, so either swaps in without rewiring. Open a UI version in patching mode for comments on how it is built.
+The UI versions contain the plain version and have the same inlets and audio outlets (plus State last), so either swaps in without rewiring. Open a UI version in patching mode for comments on how it is built.
 
 ## <a name="Use"></a>How To Use
 
-Mono (br.utility.gain.2.1 and .ui.2.1):
+Mono (br.utility.gain.2.2 and .ui.2.2):
 
 | Inlet | Control | Type | Range | Default |
 |---|---|---|---|---|
@@ -62,9 +68,9 @@ Mono (br.utility.gain.2.1 and .ui.2.1):
 | 2 | Gain | Signal or Float (UI: Float only) | -72 to 35 dB, -72 = silent, 0 = unchanged | 0 |
 
 Outlet 1: Audio Out (Signal)  
-Outlet 2: State (Message), see [State outlet](#State)
+Outlet 2 (UI version only): State (Message), see [State outlet](#State)
 
-Stereo (br.utility.gain.stereo.2.1 and .stereo.ui.2.1):
+Stereo (br.utility.gain.stereo.2.2 and .stereo.ui.2.2):
 
 | Inlet | Control | Type | Range | Default |
 |---|---|---|---|---|
@@ -73,17 +79,17 @@ Stereo (br.utility.gain.stereo.2.1 and .stereo.ui.2.1):
 | 3 | Gain | Signal or Float (UI: Float only) | -72 to 35 dB, -72 = silent, 0 = unchanged | 0 |
 
 Outlets 1 / 2: Left Out / Right Out (Signal)  
-Outlet 3: State (Message), see [State outlet](#State)
+Outlet 3 (UI version only): State (Message), see [State outlet](#State)
 
 Every change glides over 10 ms, so you can turn the gain while audio plays. The gain inlet also takes a signal, so an LFO can make a tremolo (the example patch shows one). The Gain dial puts 0 dB at 12 o'clock, with more room for fine moves near unity. In the UI versions a number into the Gain inlet moves the dial, so the screen always shows what you hear. Hover any inlet or outlet in Max for its description.
 
 ## <a name="State"></a>State outlet
 
-The last outlet of every abstraction (State) sends the current gain as a named message the moment it changes: `gain <dB>` (for example `gain -6.`). Use it to keep a display, Mira or another patch in sync. Pick it out by name with [route gain], not by position, so your patch keeps working if a later version adds controls. Repeats are filtered out.
+The last outlet of the UI versions (State) sends the current gain as a named message the moment it changes: `gain <dB>` (for example `gain -6.`). Use it to keep a display, Mira or another patch in sync. Pick it out by name with [route gain], not by position, so your patch keeps working if a later version adds controls. Repeats are filtered out.
 
 | Message | Type | Range |
 |---|---|---|
 | gain | Float | -72 - 35 dB, -72 = silent |
 
-Only numbers are reported: if a signal drives the Gain inlet of the plain version, nothing comes out of State. The example patch has a State outlet tab that shows all of this, and the RNBO patch shows the same [route gain].
+The plain versions have no State outlet: whatever drives them already knows the values. The example patch has a State outlet tab that shows all of this.
 

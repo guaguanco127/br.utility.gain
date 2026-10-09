@@ -39,7 +39,7 @@
         "enablehscroll": 1,
         "enablevscroll": 1,
         "devicewidth": 58.0,
-        "description": "br.utility.gain.ui.2.1 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+        "description": "br.utility.gain.ui.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
         "digest": "",
         "tags": "",
         "style": "",
@@ -54,12 +54,12 @@
                     "numoutlets": 0,
                     "outlettype": [],
                     "patching_rect": [
-                        520.0,
+                        560.0,
                         15.0,
                         360.0,
                         33.0
                     ],
-                    "text": "br.utility.gain.ui.2.1 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/",
+                    "text": "br.utility.gain.ui.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/",
                     "fontname": "Arial",
                     "fontsize": 12.0
                 }
@@ -155,16 +155,16 @@
                 "box": {
                     "maxclass": "newobj",
                     "id": "obj-core",
-                    "text": "br.utility.gain.2.1",
+                    "text": "br.utility.gain.2.2",
                     "numinlets": 2,
-                    "numoutlets": 2,
+                    "numoutlets": 1,
                     "outlettype": [
                         "signal",
                         ""
                     ],
                     "patching_rect": [
                         15.0,
-                        130.0,
+                        155.0,
                         170.0,
                         22.0
                     ],
@@ -181,7 +181,7 @@
                     "outlettype": [],
                     "patching_rect": [
                         15.0,
-                        180.0,
+                        215.0,
                         30.0,
                         30.0
                     ],
@@ -198,7 +198,7 @@
                     "numoutlets": 0,
                     "outlettype": [],
                     "patching_rect": [
-                        260.0,
+                        300.0,
                         55.0,
                         240.0,
                         89.0
@@ -216,12 +216,12 @@
                     "numoutlets": 0,
                     "outlettype": [],
                     "patching_rect": [
-                        260.0,
+                        300.0,
                         150.0,
                         240.0,
                         75.0
                     ],
-                    "text": "[br.utility.gain.2.1] is the real object: open it to see the gen~ inside. This file only adds the dial, so you can also patch the core directly and drive its gain inlet with a signal (an LFO for tremolo).",
+                    "text": "[br.utility.gain.2.2] is the real object: open it to see the gen~ inside. This file only adds the dial, so you can also patch the core directly and drive its gain inlet with a signal (an LFO for tremolo).",
                     "fontname": "Arial",
                     "fontsize": 12.0
                 }
@@ -235,7 +235,7 @@
                     "outlettype": [],
                     "patching_rect": [
                         15.0,
-                        235.0,
+                        270.0,
                         480.0,
                         47.0
                     ],
@@ -253,7 +253,7 @@
                     "outlettype": [],
                     "patching_rect": [
                         15.0,
-                        290.0,
+                        325.0,
                         480.0,
                         33.0
                     ],
@@ -265,7 +265,7 @@
             {
                 "box": {
                     "angle": 270.0,
-                    "annotation": "br.utility.gain.ui.2.1 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+                    "annotation": "br.utility.gain.ui.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
                     "background": 1,
                     "bgcolor": [
                         0.0,
@@ -273,14 +273,14 @@
                         0.0,
                         1.0
                     ],
-                    "hint": "br.utility.gain.ui.2.1 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+                    "hint": "br.utility.gain.ui.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
                     "id": "obj-panel",
                     "maxclass": "panel",
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        520.0,
+                        560.0,
                         60.0,
                         80.0,
                         80.0
@@ -304,12 +304,12 @@
                     "numoutlets": 0,
                     "outlettype": [],
                     "patching_rect": [
-                        90.0,
-                        180.0,
+                        200.0,
+                        215.0,
                         30.0,
                         30.0
                     ],
-                    "comment": "State (Message): gain <dB> (e.g. gain -6.), sent the moment the gain changes. Numbers only (a signal is not reported). Pick it out by name: [route gain]"
+                    "comment": "State (Message): gain <dB> (e.g. gain -6.), sent the moment the dial changes. Pick it out by name: [route gain]"
                 }
             },
             {
@@ -321,11 +321,74 @@
                     "outlettype": [],
                     "patching_rect": [
                         15.0,
-                        333.0,
+                        368.0,
                         480.0,
                         47.0
                     ],
-                    "text": "The last outlet (State) reports the dial as gain <dB> (e.g. gain -6.) the moment it changes. It comes from the core, so turning the dial, numbers into the inlet and preset recalls all show up. Pick it out by name with [route gain].",
+                    "text": "The last outlet (State) reports the dial as gain <dB> (e.g. gain -6.) the moment it changes. It taps the dial, so turning it, numbers into the inlet and preset recalls all show up. Only the UI has one: whatever drives the core directly already knows the value. Pick it out by name with [route gain].",
+                    "fontname": "Arial",
+                    "fontsize": 12.0
+                }
+            },
+            {
+                "box": {
+                    "maxclass": "newobj",
+                    "id": "obj-3",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "",
+                        ""
+                    ],
+                    "patching_rect": [
+                        165.0,
+                        122.0,
+                        51.0,
+                        22.0
+                    ],
+                    "text": "t f f",
+                    "fontname": "Arial",
+                    "fontsize": 12.0
+                }
+            },
+            {
+                "box": {
+                    "maxclass": "newobj",
+                    "id": "obj-4",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "patching_rect": [
+                        200.0,
+                        155.0,
+                        79.0,
+                        22.0
+                    ],
+                    "text": "change 0.",
+                    "fontname": "Arial",
+                    "fontsize": 12.0
+                }
+            },
+            {
+                "box": {
+                    "maxclass": "newobj",
+                    "id": "obj-5",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        200.0,
+                        185.0,
+                        90.0,
+                        22.0
+                    ],
+                    "text": "prepend gain",
                     "fontname": "Arial",
                     "fontsize": 12.0
                 }
@@ -359,18 +422,6 @@
             {
                 "patchline": {
                     "source": [
-                        "obj-gain",
-                        0
-                    ],
-                    "destination": [
-                        "obj-core",
-                        1
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
                         "obj-core",
                         0
                     ],
@@ -383,8 +434,56 @@
             {
                 "patchline": {
                     "source": [
+                        "obj-gain",
+                        0
+                    ],
+                    "destination": [
+                        "obj-3",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-3",
+                        1
+                    ],
+                    "destination": [
                         "obj-core",
                         1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-3",
+                        0
+                    ],
+                    "destination": [
+                        "obj-4",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-4",
+                        0
+                    ],
+                    "destination": [
+                        "obj-5",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-5",
+                        0
                     ],
                     "destination": [
                         "obj-1",
