@@ -154,8 +154,8 @@
                         "rect": [
                             100.0,
                             100.0,
-                            700.0,
-                            600.0
+                            824.0,
+                            629.0
                         ],
                         "bglocked": 0,
                         "openinpresentation": 0,
@@ -198,9 +198,9 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        50.0,
                                         20.0,
-                                        200.0,
+                                        20.0,
+                                        189.0,
                                         22.0
                                     ],
                                     "text": "in 1 @comment \"Left In (Signal)\"",
@@ -218,9 +218,9 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        265.0,
+                                        290.5,
                                         20.0,
-                                        200.0,
+                                        197.0,
                                         22.0
                                     ],
                                     "text": "in 2 @comment \"Right In (Signal)\"",
@@ -238,14 +238,15 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        480.0,
+                                        561.0,
                                         20.0,
                                         200.0,
-                                        22.0
+                                        62.0
                                     ],
                                     "text": "in 3 @comment \"Gain (Signal/Float) dB -72. to 35. -72 = silent, 0 = unchanged. 10 ms smoothing. Default 0\"",
                                     "fontname": "Arial",
-                                    "fontsize": 12.0
+                                    "fontsize": 12.0,
+                                    "linecount": 4
                                 }
                             },
                             {
@@ -259,8 +260,8 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        50.0,
-                                        70.0,
+                                        20.0,
+                                        107.0,
                                         560.0,
                                         420.0
                                     ],
@@ -278,9 +279,9 @@
                                     "numoutlets": 0,
                                     "outlettype": [],
                                     "patching_rect": [
-                                        50.0,
-                                        510.0,
-                                        200.0,
+                                        20.0,
+                                        557.0,
+                                        205.0,
                                         22.0
                                     ],
                                     "text": "out 1 @comment \"Left Out (Signal)\"",
@@ -296,9 +297,9 @@
                                     "numoutlets": 0,
                                     "outlettype": [],
                                     "patching_rect": [
-                                        265.0,
-                                        510.0,
-                                        200.0,
+                                        561.0,
+                                        557.0,
+                                        213.0,
                                         22.0
                                     ],
                                     "text": "out 2 @comment \"Right Out (Signal)\"",
