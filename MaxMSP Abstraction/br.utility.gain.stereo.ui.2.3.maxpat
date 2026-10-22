@@ -39,7 +39,7 @@
         "enablehscroll": 1,
         "enablevscroll": 1,
         "devicewidth": 58.0,
-        "description": "br.utility.gain.stereo.ui.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+        "description": "br.utility.gain.stereo.ui.2.3 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
         "digest": "",
         "tags": "",
         "style": "",
@@ -59,7 +59,7 @@
                         360.0,
                         33.0
                     ],
-                    "text": "br.utility.gain.stereo.ui.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/",
+                    "text": "br.utility.gain.stereo.ui.2.3 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/",
                     "fontname": "Arial",
                     "fontsize": 12.0
                 }
@@ -175,7 +175,7 @@
                 "box": {
                     "maxclass": "newobj",
                     "id": "obj-core",
-                    "text": "br.utility.gain.stereo.2.2",
+                    "text": "br.utility.gain.stereo.2.3",
                     "numinlets": 3,
                     "numoutlets": 2,
                     "outlettype": [
@@ -260,7 +260,7 @@
                         240.0,
                         75.0
                     ],
-                    "text": "[br.utility.gain.stereo.2.2] is the real object: open it to see the gen~ inside. This file only adds the dial, so you can also patch the core directly and drive its gain inlet with a signal (an LFO for tremolo).",
+                    "text": "[br.utility.gain.stereo.2.3] is the real object: open it to see the gen~ inside. This file only adds the dial, so you can also patch the core directly and drive its gain inlet with a signal (an LFO for tremolo).",
                     "fontname": "Arial",
                     "fontsize": 12.0
                 }
@@ -304,7 +304,7 @@
             {
                 "box": {
                     "angle": 270.0,
-                    "annotation": "br.utility.gain.stereo.ui.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+                    "annotation": "br.utility.gain.stereo.ui.2.3 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
                     "background": 1,
                     "bgcolor": [
                         0.0,
@@ -312,7 +312,7 @@
                         0.0,
                         1.0
                     ],
-                    "hint": "br.utility.gain.stereo.ui.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+                    "hint": "br.utility.gain.stereo.ui.2.3 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
                     "id": "obj-panel",
                     "maxclass": "panel",
                     "mode": 0,

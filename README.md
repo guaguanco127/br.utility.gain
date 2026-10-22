@@ -1,13 +1,13 @@
 # Max/MSP Patches, Abstractions, Externals, RNBO, VSTs, and Ableton Max for Live 
 
-## br.utility.gain.2.2
+## br.utility.gain.2.3
    
 By Brian Riordan  
 guaguanco127 [at] gmail [dot] com  
 brianriordanmusic [at] gmail [dot] com  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
   
-Repository for br.utility.gain.2.2, with all related files, can be found here: [https://github.com/guaguanco127/br.utility.gain](https://github.com/guaguanco127/br.utility.gain)  
+Repository for br.utility.gain.2.3, with all related files, can be found here: [https://github.com/guaguanco127/br.utility.gain](https://github.com/guaguanco127/br.utility.gain)  
 Additional programs can be found here: [https://github.com/guaguanco127/br.max](https://github.com/guaguanco127/br.max)
 
 These files were created with Max 9, or RNBO.
@@ -15,6 +15,7 @@ These files were created with Max 9, or RNBO.
 ## Links
 
 [About](#About)  
+[What's new in 2.3](#New23)  
 [Max/MSP Abstraction](https://github.com/guaguanco127/br.utility.gain/tree/main/MaxMSP%20Abstraction) To use as an abstraction within Max/MSP   
 [Max/MSP RNBO for External or VST](https://github.com/guaguanco127/br.utility.gain/tree/main/RNBO%20Patchers%20for%20External%20or%20VST) To build your own Max external, or a VST or AU audio plugin (needs RNBO)  
 [Ableton Max for Live Device](https://github.com/guaguanco127/br.utility.gain/tree/main/Ableton%20Max%20For%20Live) To use inside of Ableton Suite   
@@ -24,6 +25,10 @@ These files were created with Max 9, or RNBO.
 A click-free gain in decibels: -72 dB is silence, 0 dB leaves the signal unchanged, and +35 dB is the top (the same top as Ableton Utility's Gain). Jumping a gain straight to a new value cuts the wave mid-swing, and that jump is heard as a click. br.utility.gain glides to each new value over 10 ms instead: too fast to hear as a fade, smooth enough that nothing clicks, and the bottom of the range lands on true silence. Works at any sample rate.
 
 You can use it as an abstraction within Max/MSP or as a Max for Live device within Ableton Live Suite. With RNBO you can also build your own Max external or VST/AU plugin from the included RNBO patch.
+
+## <a name="New23"></a>What's new in 2.3
+
+- **Readable dials in the Max for Live device:** the dials' values and needles are now white, so they stand out on the black panel (with Live's default theme they were dark and hard to read). The abstraction, RNBO patch and sound are unchanged; every file now has the version 2.3.
 
 ## <a name="New22"></a>What's new in 2.2
 
@@ -50,17 +55,17 @@ You can use it as an abstraction within Max/MSP or as a Max for Live device with
 
 | File | What it is |
 |---|---|
-| br.utility.gain.2.2 | Mono, no UI. The plain object to patch with |
-| br.utility.gain.stereo.2.2 | Stereo, no UI. One gain for both channels, so L and R stay together |
-| br.utility.gain.ui.2.2 | Mono, with a Gain dial, ready for a [bpatcher] |
-| br.utility.gain.stereo.ui.2.2 | Stereo, with a Gain dial, ready for a [bpatcher] |
-| _br.utility.gain.example.2.2 | Example patch: open this first (its stereo core tab shows br.utility.gain.stereo.2.2, the plain stereo version) |
+| br.utility.gain.2.3 | Mono, no UI. The plain object to patch with |
+| br.utility.gain.stereo.2.3 | Stereo, no UI. One gain for both channels, so L and R stay together |
+| br.utility.gain.ui.2.3 | Mono, with a Gain dial, ready for a [bpatcher] |
+| br.utility.gain.stereo.ui.2.3 | Stereo, with a Gain dial, ready for a [bpatcher] |
+| _br.utility.gain.example.2.3 | Example patch: open this first (its stereo core tab shows br.utility.gain.stereo.2.3, the plain stereo version) |
 
 The UI versions contain the plain version and have the same inlets and audio outlets (plus State last), so either swaps in without rewiring. Open a UI version in patching mode for comments on how it is built.
 
 ## <a name="Use"></a>How To Use
 
-Mono (br.utility.gain.2.2 and .ui.2.2):
+Mono (br.utility.gain.2.3 and .ui.2.2):
 
 | Inlet | Control | Type | Range | Default |
 |---|---|---|---|---|
@@ -70,7 +75,7 @@ Mono (br.utility.gain.2.2 and .ui.2.2):
 Outlet 1: Audio Out (Signal)  
 Outlet 2 (UI version only): State (Message), see [State outlet](#State)
 
-Stereo (br.utility.gain.stereo.2.2 and .stereo.ui.2.2):
+Stereo (br.utility.gain.stereo.2.3 and .stereo.ui.2.2):
 
 | Inlet | Control | Type | Range | Default |
 |---|---|---|---|---|

@@ -39,7 +39,7 @@
         "enablehscroll": 1,
         "enablevscroll": 1,
         "devicewidth": 0.0,
-        "description": "br.utility.gain.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+        "description": "br.utility.gain.2.3 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
         "digest": "",
         "tags": "",
         "style": "",
@@ -59,7 +59,7 @@
                         360.0,
                         33.0
                     ],
-                    "text": "br.utility.gain.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/",
+                    "text": "br.utility.gain.2.3 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/",
                     "fontname": "Arial",
                     "fontsize": 12.0
                 }
@@ -108,7 +108,7 @@
                 "box": {
                     "maxclass": "newobj",
                     "id": "obj-gen",
-                    "text": "gen~ @title br.utility.gain.2.2",
+                    "text": "gen~ @title br.utility.gain.2.3",
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [
@@ -223,7 +223,7 @@
                                         420.0
                                     ],
                                     "parameter_enable": 0,
-                                    "code": "// br.utility.gain.2.2 -- click-free gain in decibels\n// Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/\n// MUST MATCH: the stereo version uses the same smoother, one gain for both channels\n// in1 audio, in2 gain in dB -72..35, signal or number. -72 = silent, 0 = unchanged\n// out1 audio\n// The gain glides to each new value along a 10 ms smoother, so a jump never clicks.\n// It smooths amplitude, not dB, and lands exactly on its target, so the lowest\n// setting, -72, is true silence, which a plain one-pole smoother never reaches.\n// A moving gain signal, such as an LFO for tremolo, is smoothed the same way.\n\nHistory gS(0);\n\n// read state first\ng = gS;\n\ndb = clamp(in2, -72, 35);\ngoal = (db > -72) ? dbtoa(db) : 0;\nk = 1 - exp(-1 / max(1, mstosamps(10)));\ng = g + (goal - g) * k;\n// within -120 dB of the target: land on it\nif (abs(goal - g) < 0.000001) {\n    g = goal;\n}\n\nout1 = in1 * g;\n// write state last\ngS = g;\n",
+                                    "code": "// br.utility.gain.2.3 -- click-free gain in decibels\n// Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/\n// MUST MATCH: the stereo version uses the same smoother, one gain for both channels\n// in1 audio, in2 gain in dB -72..35, signal or number. -72 = silent, 0 = unchanged\n// out1 audio\n// The gain glides to each new value along a 10 ms smoother, so a jump never clicks.\n// It smooths amplitude, not dB, and lands exactly on its target, so the lowest\n// setting, -72, is true silence, which a plain one-pole smoother never reaches.\n// A moving gain signal, such as an LFO for tremolo, is smoothed the same way.\n\nHistory gS(0);\n\n// read state first\ng = gS;\n\ndb = clamp(in2, -72, 35);\ngoal = (db > -72) ? dbtoa(db) : 0;\nk = 1 - exp(-1 / max(1, mstosamps(10)));\ng = g + (goal - g) * k;\n// within -120 dB of the target: land on it\nif (abs(goal - g) < 0.000001) {\n    g = goal;\n}\n\nout1 = in1 * g;\n// write state last\ngS = g;\n",
                                     "fontname": "Arial",
                                     "fontsize": 12.0
                                 }

@@ -15,7 +15,7 @@
             1387.0,
             770.0
         ],
-        "description": "_br.utility.gain.example.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+        "description": "_br.utility.gain.example.2.3 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
         "showontab": 1,
         "boxes": [
             {
@@ -33,7 +33,7 @@
                         453.0,
                         33.0
                     ],
-                    "text": "_br.utility.gain.example.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/"
+                    "text": "_br.utility.gain.example.2.3 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/"
                 }
             },
             {
@@ -1577,7 +1577,7 @@
                         439.0,
                         74.0
                     ],
-                    "text": "Four files, same DSP inside:\nbr.utility.gain.2.2 = mono core, no UI (in: audio, gain)\nbr.utility.gain.stereo.2.2 = stereo core, no UI (in: L, R, gain)\nbr.utility.gain.ui.2.2 / .stereo.ui.2.2 = the same with a Gain dial, for bpatchers\nUI and core have the same inlets and audio outlets (the UI adds State last), so either swaps in without rewiring."
+                    "text": "Four files, same DSP inside:\nbr.utility.gain.2.3 = mono core, no UI (in: audio, gain)\nbr.utility.gain.stereo.2.3 = stereo core, no UI (in: L, R, gain)\nbr.utility.gain.ui.2.3 / .stereo.ui.2.2 = the same with a Gain dial, for bpatchers\nUI and core have the same inlets and audio outlets (the UI adds State last), so either swaps in without rewiring."
                 }
             },
             {
@@ -1682,7 +1682,7 @@
                         220.0,
                         20.0
                     ],
-                    "text": "A: br.utility.gain.stereo.ui.2.2"
+                    "text": "A: br.utility.gain.stereo.ui.2.3"
                 }
             },
             {
@@ -1696,7 +1696,7 @@
                     "lockeddragscroll": 0,
                     "lockedsize": 0,
                     "maxclass": "bpatcher",
-                    "name": "br.utility.gain.stereo.ui.2.2.maxpat",
+                    "name": "br.utility.gain.stereo.ui.2.3.maxpat",
                     "numinlets": 3,
                     "numoutlets": 3,
                     "offset": [
@@ -1853,7 +1853,7 @@
                         130.0,
                         22.0
                     ],
-                    "text": "br.utility.gain.2.2"
+                    "text": "br.utility.gain.2.3"
                 }
             },
             {
@@ -1904,7 +1904,7 @@
                     "lockeddragscroll": 0,
                     "lockedsize": 0,
                     "maxclass": "bpatcher",
-                    "name": "br.utility.gain.ui.2.2.maxpat",
+                    "name": "br.utility.gain.ui.2.3.maxpat",
                     "numinlets": 2,
                     "numoutlets": 2,
                     "offset": [
@@ -1938,7 +1938,7 @@
                         238.0,
                         20.0
                     ],
-                    "text": "B volume: br.utility.gain.ui.2.2, silent at load"
+                    "text": "B volume: br.utility.gain.ui.2.3, silent at load"
                 }
             },
             {
@@ -2511,7 +2511,7 @@
                                 "box": {
                                     "id": "c-head",
                                     "maxclass": "comment",
-                                    "text": "Stereo core: br.utility.gain.stereo.2.2",
+                                    "text": "Stereo core: br.utility.gain.stereo.2.3",
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [
@@ -4056,7 +4056,7 @@
                                 "box": {
                                     "id": "c-core",
                                     "maxclass": "newobj",
-                                    "text": "br.utility.gain.stereo.2.2",
+                                    "text": "br.utility.gain.stereo.2.3",
                                     "numinlets": 3,
                                     "numoutlets": 2,
                                     "outlettype": [

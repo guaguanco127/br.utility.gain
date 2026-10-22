@@ -1,11 +1,11 @@
-# Ableton Max for Live device: br.utility.gain.2.2  
+# Ableton Max for Live device: br.utility.gain.2.3  
    
 By Brian Riordan  
 guaguanco127 [at] gmail [dot] com  
 brianriordanmusic [at] gmail [dot] com  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
   
-Repository for br.utility.gain.2.2, with all related files, can be found here: [https://github.com/guaguanco127/br.utility.gain](https://github.com/guaguanco127/br.utility.gain)  
+Repository for br.utility.gain.2.3, with all related files, can be found here: [https://github.com/guaguanco127/br.utility.gain](https://github.com/guaguanco127/br.utility.gain)  
 Additional programs can be found here: [https://github.com/guaguanco127/br.max](https://github.com/guaguanco127/br.max)
 
 These files were created with Max 9.
@@ -13,6 +13,7 @@ These files were created with Max 9.
 ## Table of Contents 
 
 [About](#About)  
+[What's new in 2.3](#New23)  
 [What is a Max for Live Device?](#M4L)  
 [How To Install](#Install)  
 
@@ -20,7 +21,11 @@ These files were created with Max 9.
 
 A click-free gain in decibels: -72 dB is silence, 0 dB leaves the signal unchanged, and +35 dB is the top (the same top as Ableton Utility's Gain). Jumping a gain straight to a new value cuts the wave mid-swing, and that jump is heard as a click. br.utility.gain glides to each new value over 10 ms instead: too fast to hear as a fade, smooth enough that nothing clicks, and the bottom of the range lands on true silence. Works at any sample rate.
 
-A stereo audio effect with one Gain dial, -72 to +35 dB, with 0 dB at 12 o'clock. Gain is a Live parameter, so you can automate it or map it to a controller. The separate "basic" device from 1.0 is gone; the commented teaching version now lives in the [Max/MSP abstractions](https://github.com/guaguanco127/br.utility.gain/tree/main/MaxMSP%20Abstraction) (br.utility.gain.stereo.ui.2.2).
+A stereo audio effect with one Gain dial, -72 to +35 dB, with 0 dB at 12 o'clock. Gain is a Live parameter, so you can automate it or map it to a controller. The separate "basic" device from 1.0 is gone; the commented teaching version now lives in the [Max/MSP abstractions](https://github.com/guaguanco127/br.utility.gain/tree/main/MaxMSP%20Abstraction) (br.utility.gain.stereo.ui.2.3).
+
+## <a name="New23"></a>What's new in 2.3
+
+- **Readable dials in the Max for Live device:** the dials' values and needles are now white, so they stand out on the black panel (with Live's default theme they were dark and hard to read). The abstraction, RNBO patch and sound are unchanged; every file now has the version 2.3.
 
 ## <a name="M4L"></a>What Is a Max For Live Device?
 
@@ -33,7 +38,7 @@ Max For Live brings the power and flexibility of Max to Ableton Live. Max For Li
 2. For Mac:  
 Go to your user folder  
 Then Music > Ableton > User Library > Presets > Audio Effects > Max Audio Effect  
-Copy br.utility.gain.2.2.amxd into that folder
+Copy br.utility.gain.2.3.amxd into that folder
 
 3. For Windows: \Users\[username]\Documents\Ableton\User Library\Presets\Audio Effects\Max Audio Effect  
   

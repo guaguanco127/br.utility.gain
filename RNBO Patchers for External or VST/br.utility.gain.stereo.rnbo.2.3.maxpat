@@ -15,7 +15,7 @@
             416.0,
             638.0
         ],
-        "description": "br.utility.gain.stereo.rnbo.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
+        "description": "br.utility.gain.stereo.rnbo.2.3 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/",
         "boxes": [
             {
                 "box": {
@@ -30,7 +30,7 @@
                         520.0,
                         33.0
                     ],
-                    "text": "br.utility.gain.stereo.rnbo.2.2 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/"
+                    "text": "br.utility.gain.stereo.rnbo.2.3 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/"
                 }
             },
             {
@@ -1171,7 +1171,7 @@
                                                         ],
                                                         "id": "obj-4",
                                                         "fontsize": 12.0,
-                                                        "code": "// br.utility.gain.stereo.2.2 -- click-free gain in decibels\n// Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/\n// MUST MATCH: the stereo core, the stereo UI, the RNBO host and the M4L device embed this same code\n// in1/in2 audio L/R, in3 gain in dB -72..35, signal or number. -72 = silent, 0 = unchanged\n// out1/out2 audio L/R. One gain for both channels, so L and R stay together\n// The gain glides to each new value along a 10 ms smoother, so a jump never clicks.\n// It smooths amplitude, not dB, and lands exactly on its target, so the lowest\n// setting, -72, is true silence, which a plain one-pole smoother never reaches.\n// A moving gain signal, such as an LFO for tremolo, is smoothed the same way.\n\nHistory gS(0);\n\n// read state first\ng = gS;\n\ndb = clamp(in3, -72, 35);\ngoal = (db > -72) ? dbtoa(db) : 0;\nk = 1 - exp(-1 / max(1, mstosamps(10)));\ng = g + (goal - g) * k;\n// within -120 dB of the target: land on it\nif (abs(goal - g) < 0.000001) {\n    g = goal;\n}\n\nout1 = in1 * g;\nout2 = in2 * g;\n// write state last\ngS = g;\n"
+                                                        "code": "// br.utility.gain.stereo.2.3 -- click-free gain in decibels\n// Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/\n// MUST MATCH: the stereo core, the stereo UI, the RNBO host and the M4L device embed this same code\n// in1/in2 audio L/R, in3 gain in dB -72..35, signal or number. -72 = silent, 0 = unchanged\n// out1/out2 audio L/R. One gain for both channels, so L and R stay together\n// The gain glides to each new value along a 10 ms smoother, so a jump never clicks.\n// It smooths amplitude, not dB, and lands exactly on its target, so the lowest\n// setting, -72, is true silence, which a plain one-pole smoother never reaches.\n// A moving gain signal, such as an LFO for tremolo, is smoothed the same way.\n\nHistory gS(0);\n\n// read state first\ng = gS;\n\ndb = clamp(in3, -72, 35);\ngoal = (db > -72) ? dbtoa(db) : 0;\nk = 1 - exp(-1 / max(1, mstosamps(10)));\ng = g + (goal - g) * k;\n// within -120 dB of the target: land on it\nif (abs(goal - g) < 0.000001) {\n    g = goal;\n}\n\nout1 = in1 * g;\nout2 = in2 * g;\n// write state last\ngS = g;\n"
                                                     }
                                                 },
                                                 {
@@ -1535,7 +1535,7 @@
                                         520.0,
                                         75.0
                                     ],
-                                    "text": "gen~ code MUST MATCH br.utility.gain.stereo.2.2 (open both: same codebox). param Gain = the plugin parameter (VST/AU), exponent 0.57 puts 0 dB mid-knob. in 3 sets the same param, so the exported external [br.utility.gain.stereo.2.2~] has the same three inlets as the abstraction: L, R, Gain."
+                                    "text": "gen~ code MUST MATCH br.utility.gain.stereo.2.3 (open both: same codebox). param Gain = the plugin parameter (VST/AU), exponent 0.57 puts 0 dB mid-knob. in 3 sets the same param, so the exported external [br.utility.gain.stereo.2.3~] has the same three inlets as the abstraction: L, R, Gain."
                                 }
                             }
                         ],
@@ -1706,7 +1706,7 @@
                         340.0,
                         87.0
                     ],
-                    "text": "EXPORT NAME: br.utility.gain.stereo.2.2~\nMax External Export asks for a name: keep the ~ at the end. Without it the external has the same name as the abstraction br.utility.gain.stereo.2.2, and Max loads whichever it finds first. Audio Plugin Export (VST3/AU): any name; the Gain param appears in your DAW."
+                    "text": "EXPORT NAME: br.utility.gain.stereo.2.3~\nMax External Export asks for a name: keep the ~ at the end. Without it the external has the same name as the abstraction br.utility.gain.stereo.2.3, and Max loads whichever it finds first. Audio Plugin Export (VST3/AU): any name; the Gain param appears in your DAW."
                 }
             }
         ],
